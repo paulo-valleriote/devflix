@@ -14,6 +14,9 @@ function Footer() {
           Imersão React da Alura
         </a>
       </p>
+      <p>
+        Por <a href='www.github.com/paulo-valleriote' target={'_blank'}>Paulo Valleriote</a>
+      </p>
     </FooterBase>
   );
 }

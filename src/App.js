@@ -6,12 +6,12 @@ import Footer from "./components /Footer"
 
 function App() {
   return (
-    <div style={{ background: '#141414' }}>
+    <div>
       <Menu />
 
       <BannerMain
-        videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
-        url={dadosIniciais.categorias[0].videos[0].url}
+        videoTitle={dadosIniciais.categorias[2].videos[1].titulo}
+        url={dadosIniciais.categorias[2].videos[1].url}
         videoDescription={"O que é Front-end? Trabalhando na área."}
       />
 
@@ -43,6 +43,11 @@ function App() {
       <Carousel
         ignoreFirstVideo
         category={dadosIniciais.categorias[5]}
+      />
+
+      <Carousel
+        ignoreFirstVideo
+        category={dadosIniciais.categorias[6]}
       />
 
       <Footer />

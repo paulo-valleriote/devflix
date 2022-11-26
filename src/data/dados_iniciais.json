@@ -1,6 +1,66 @@
 {
   "categorias": [
     {
+      "titulo": "Músicas",
+      "cor": "#6b5be2",
+      "videos": [
+        {
+          "titulo": "Heilung - Anoana",
+          "url": "https://www.youtube.com/watch?v=SVbc_Fwbt50"
+        },
+        {
+          "titulo": "Wardruna - Grá",
+          "url": "https://www.youtube.com/watch?v=kFU7nRe7C0A"
+        },
+        {
+          "titulo": "Ghost - Cirice",
+          "url": "https://www.youtube.com/watch?v=-0Ao4t_fe0I"
+        },
+        {
+          "titulo": "Heilung - Krigsgaldr",
+          "url": "https://www.youtube.com/watch?v=QRg_8NNPTD8"
+        },
+        {
+          "titulo": "Nirvana - In Bloom",
+          "url": "https://www.youtube.com/watch?v=PbgKEjNBHqM"
+        },
+        {
+          "titulo": "IC3PEAK - Смерти Больше Нет",
+          "url": "https://www.youtube.com/watch?v=MBG3Gdt5OGs"
+        }
+      ]
+    },
+    {
+      "titulo": "RPG de Mesa",
+      "cor": "#9cd33b",
+      "videos": [
+        {
+          "titulo": "The Draw of Destiny | Critical Role | Campaign 3, Episode 1",
+          "url": "https://www.youtube.com/watch?v=P8pLvV3FjPc"
+        },
+        {
+          "titulo": "'Tipora'- Episódio 1 - O Segredo Na Ilha",
+          "url": "https://youtu.be/Pf4HzTdA2WE"
+        },
+        {
+          "titulo": "'Ordo Realitas'- Episódio 1 - Ordem Paranormal: Desconjuração",
+          "url": "https://www.youtube.com/watch?v=b7PvLWZR6pg"
+        },
+        {
+          "titulo": "Skyfall - Episódio 1: O Mercado Repentino",
+          "url": "https://www.youtube.com/watch?v=N6b4da5LWjE"
+        },
+        {
+          "titulo": "Arrival At Kraghammer | Critical Role: Vox Machina | Episode 1",
+          "url": "https://www.youtube.com/watch?v=i-p9lWIhcLQ"
+        },
+        {
+          "titulo": "Curious Beginnings | Critical Role: The Mighty Nein | Episode 1",
+          "url": "https://www.youtube.com/watch?v=byva0hOj8CU"
+        }
+      ]
+    },
+    {
       "titulo": "Front End",
       "link": "https://www.alura.com.br/formacao-front-end",
       "cor": "#6BD1FF",
@@ -22,25 +82,13 @@
           "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
         },
         {
-          "titulo": "Pare de chutar e aprenda a display: inline #01",
-          "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
-        },
-        {
-          "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",
-          "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0"
-        },
-        {
           "titulo": "Qual é a melhor linguagem de programação? #HipstersPontoTube",
           "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w"
         },
         {
-          "titulo": "Novidades do Angular v9",
-          "url": "https://www.youtube.com/watch?v=34uHo7hFmG0"
-        },
-        {
           "titulo": "Base para aprender os frameworks",
           "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI"
-        }        
+        }
       ]
     },
     {
@@ -66,36 +114,10 @@
         {
           "titulo": "API: Dicionário do Programador",
           "url": "https://www.youtube.com/watch?v=vGuqKIRWosk"
-        }, 
+        },
         {
           "titulo": "Usando Git Direito",
           "url": "https://www.youtube.com/watch?v=6OokP-NE49k"
-        }
-      ]
-    },
-    {
-      "titulo": "Data Science e Inteligência Artificial",
-      "cor": "#9cd33b",
-      "link_extra": {
-        "text": "Cursos de Data Science na Alura",
-        "url": "https://www.alura.com.br/formacao-data-science"
-      },
-      "videos": [
-        {
-          "titulo": "Teste de Turing",
-          "url": "https://www.youtube.com/watch?v=BaPGU4JWa34"
-        },
-        {
-          "titulo": "O que é Data Science?",
-          "url": "https://www.youtube.com/watch?v=5b9Z8toVaAU&t=9s"
-        },
-        {
-          "titulo": "Melhor forma de aprender Python",
-          "url": "https://www.youtube.com/watch?v=Gojqw9BQ5qY"
-        },
-        {
-          "titulo": "Como ingressar no mercado de Data Science?",
-          "url": "https://www.youtube.com/watch?v=gxyjGmOV540"
         }
       ]
     },
@@ -104,30 +126,56 @@
       "cor": "orange",
       "videos": [
         {
-          "titulo": "Interestellar",
-          "url": "https://www.youtube.com/watch?v=frD_IiY_A3E"
-        },
-        {
-          "titulo": "Gattaca",
-          "url": "https://www.youtube.com/watch?v=Dl0tYLbrhhs"
-        },
-        {
           "titulo": "A Chegada",
           "url": "https://www.youtube.com/watch?v=rNciXGzYZms"
         },
         {
-          "titulo": "Feitiço do Tempo",
-          "url": "https://www.youtube.com/watch?v=zi8d69P9NvI"
+          "titulo": "Interestellar",
+          "url": "https://www.youtube.com/watch?v=mbbPSq63yuM"
+        },
+        {
+          "titulo": "O Senhor dos Anéis: O Retorno do Rei",
+          "url": "https://www.youtube.com/watch?v=LiKeQrChkTY"
+        },
+        {
+          "titulo": "Homem-Aranha: Através do Aranhaverso",
+          "url": "https://www.youtube.com/watch?v=RKb1jSW56UQ"
+        },
+        {
+          "titulo": "Warcraft - O Primeiro Encontro de Dois Mundos",
+          "url": "https://www.youtube.com/watch?v=Dqvz8w-latE"
+        }
+      ]
+    },
+    {
+      "titulo": "Séries",
+      "cor": "purple",
+      "videos": [
+        {
+          "titulo": "La Casa de Papel",
+          "url": "https://www.youtube.com/watch?v=iS5xXr-GOnM"
+        },
+        {
+          "titulo": "Senhor dos Anéis: Os Anéis de Poder",
+          "url": "https://www.youtube.com/watch?v=m-CvfthZ4zg"
+        },
+        {
+          "titulo": "Dark",
+          "url": "https://www.youtube.com/watch?v=JCCssUOtn2E"
+        },
+        {
+          "titulo": "Better Call Saul",
+          "url": "https://www.youtube.com/watch?v=zzy6wWjFONY"
+        },
+        {
+          "titulo": "Ragnarok",
+          "url": "https://www.youtube.com/watch?v=i2qDt5D8RSs"
         }
       ]
     },
     {
       "titulo": "Games",
       "cor": "red",
-      "link_extra": {
-        "text": "Formação de Jogos na Alura",
-        "url": "https://www.alura.com.br/formacao-jogos-unity"
-      },
       "videos": [
         {
           "titulo": "Final Fantasy 7",
@@ -148,36 +196,6 @@
         {
           "titulo": "Pokémon Let's Go Pikachu/Eevee",
           "url": "https://www.youtube.com/watch?v=L56q_k2ydrs"
-        }
-      ]
-    },
-    {
-      "titulo": "Aprendendo a aprender tecnologia",
-      "cor": "#6b5be2",
-      "link_extra": {
-        "text": "Curso sobre aprendizado na Alura",
-        "url": "https://alura.com.br/curso-online-aprender-a-aprender-tecnicas-para-seu-autodesenvolvimento"
-      },
-      "videos": [
-        {
-          "titulo": "Como estudar melhor?",
-          "url": "https://www.youtube.com/watch?v=Is6c9KSGCbk&feature=youtu.be"
-        },
-        {
-          "titulo": "Faculdade",
-          "url": "https://www.youtube.com/watch?v=jw06H8esyzQ&feature=youtu.be"
-        },
-        {
-          "titulo": "Frameworks",
-          "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI"
-        },
-        {
-          "titulo": "A mágica do Aprendizado",
-          "url": "https://www.youtube.com/watch?v=oTEXzpfEpPY"
-        },
-        {
-          "titulo": "Como aprender a programar?",
-          "url": "https://www.youtube.com/watch?v=MwCx2qKdbDw&feature=youtu.be"
         }
       ]
     }
