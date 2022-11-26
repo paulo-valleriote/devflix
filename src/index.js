@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './reset.css';
+import './index.css';
 import Home from './pages/Home';
 
 // react router torna a aplicação single-page, sem recarregar.

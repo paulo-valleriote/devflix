@@ -3,6 +3,8 @@ import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
 import Slider, { SliderItem } from './components/Slider'
 import VideoCard from './components/VideoCard';
 
+// DESAFIO: NAO DEIXAR O ESPAÇO VAZIO
+
 function Carousel({
   ignoreFirstVideo,
   category,
