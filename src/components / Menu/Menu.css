@@ -1,5 +1,10 @@
 .Logo {
     height: 40px;
+    transition: 0.3s;
+}
+
+.Logo:hover {
+    scale: 1.1;
 }
 
 @media (max-width: 800px) {
