@@ -3,8 +3,6 @@ import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
 import Slider, { SliderItem } from './components/Slider'
 import VideoCard from './components/VideoCard';
 
-// DESAFIO: NAO DEIXAR O ESPAÇO VAZIO
-
 function Carousel({
   ignoreFirstVideo,
   category,
@@ -13,6 +11,7 @@ function Carousel({
   const categoryColor = category.cor;
   const categoryExtraLink = category.link_extra;
   const videos = category.videos;
+
   return (
     <VideoCardGroupContainer>
       {categoryTitle && (
@@ -44,7 +43,7 @@ function Carousel({
           );
         })}
       </Slider>
-    </VideoCardGroupContainer>
+    </VideoCardGroupContainer >
   );
 }
 

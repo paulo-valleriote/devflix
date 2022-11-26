@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const Container = styled.ul`
   padding: 0;
   margin: 0;
+
   .slick-prev,
   .slick-next {
     z-index: 50;
@@ -18,12 +19,21 @@ const Container = styled.ul`
       font-size: 30px;
     }
   }
-  
+
   .slick-prev {
-    left: 0;
+    left: -40px;
+    transition: scale 0.3s;
   }
+  .slick-prev:hover {
+    scale: 1.2;
+  }
+
   .slick-next {
-    right: 16px;
+    right: -40px;
+    transition: scale 0.3s ease;
+  }
+  .slick-next:hover {
+    scale: 1.2;
   }
 `;
 
@@ -40,11 +50,10 @@ export const SliderItem = styled.li`
 
 const Slider = ({ children }) => (
   <Container>
-    <SlickSlider {...{
+    <SlickSlider className='fade' {...{
       dots: false,
       infinite: true,
-      speed: 400,
-      centerMode: false,
+      speed: 500,
       variableWidth: true,
       adaptiveHeight: true,
     }}
