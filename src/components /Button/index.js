@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+// Caso seja necessário usar o Link como padrão é só trocar para styled(Link)`content`
 const Button = styled.button`
         
     color: var(--white);

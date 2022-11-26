@@ -15,7 +15,7 @@ function Footer() {
         </a>
       </p>
       <p>
-        Por <a href='www.github.com/paulo-valleriote' target={'_blank'}>Paulo Valleriote</a>
+        Por <a href='https://github.com/paulo-valleriote' rel="noreferrer" target={'_blank'}>Paulo Valleriote</a>
       </p>
     </FooterBase>
   );

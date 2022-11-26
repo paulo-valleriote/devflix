@@ -1,12 +1,12 @@
-import Menu from "./components / Menu";
-import dadosIniciais from './data/dados_iniciais.json'
-import BannerMain from "./components /BannerMain";
-import Carousel from "./components /Carousel"
-import Footer from "./components /Footer"
+import Menu from "../../components / Menu";
+import dadosIniciais from '../../data/dados_iniciais.json'
+import BannerMain from "../../components /BannerMain";
+import Carousel from "../../components /Carousel"
+import Footer from "../../components /Footer"
 
-function App() {
+export default function Home() {
   return (
-    <div>
+    <>
       <Menu />
 
       <BannerMain
@@ -51,8 +51,6 @@ function App() {
       />
 
       <Footer />
-    </div >
+    </ >
   );
 }
-
-export default App;
