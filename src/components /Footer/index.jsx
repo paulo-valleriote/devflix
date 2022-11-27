@@ -1,5 +1,5 @@
 import React from 'react';
-import { FooterBase } from './styles';
+import FooterBase from './styles';
 
 function Footer() {
   return (
@@ -15,7 +15,9 @@ function Footer() {
         </a>
       </p>
       <p>
-        Por <a href='https://github.com/paulo-valleriote' rel="noreferrer" target={'_blank'}>Paulo Valleriote</a>
+        Por
+        {' '}
+        <a href="https://github.com/paulo-valleriote" rel="noreferrer" target="_blank">Paulo Valleriote</a>
       </p>
     </FooterBase>
   );

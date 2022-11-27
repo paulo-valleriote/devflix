@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import VideoIframeResponsive from './components/VideoIframeResponsive';
 import { BannerMainContainer, ContentAreaContainer, WatchButton } from './styles';
 
@@ -43,3 +45,14 @@ export default function BannerMain({
     </BannerMainContainer>
   );
 }
+
+BannerMain.defaultProps = {
+  videoTitle: '',
+  videoDescription: '',
+};
+
+BannerMain.propTypes = {
+  videoTitle: PropTypes.string,
+  videoDescription: PropTypes.string,
+  url: PropTypes.string.isRequired,
+};
