@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Button from '../../../components /Button';
 import FormField from '../../../components /FormField';
 import PageDefault from '../../../components /PageRoot';
 
@@ -35,6 +36,17 @@ export default function RegisterNewCategory() {
     setValues(initialValues);
   };
 
+  useEffect(() => {
+    const URL = 'http://localhost:8080/categories';
+    fetch(URL)
+      .then(async (serverRes) => {
+        const res = await serverRes.json();
+        setCategories([
+          ...res,
+        ]);
+      });
+  }, []);
+
   return (
     <PageDefault>
       <h1>
@@ -45,7 +57,6 @@ export default function RegisterNewCategory() {
       <form onSubmit={(e) => handleSubmit(e)}>
         <FormField
           label="Nome da Categoria"
-          FieldType="input"
           type="text"
           name="name"
           value={values.name}
@@ -54,8 +65,7 @@ export default function RegisterNewCategory() {
 
         <FormField
           label="Descrição"
-          FieldType="textarea"
-          type=""
+          type="textarea"
           name="description"
           value={values.description}
           onChange={handleValues}
@@ -63,25 +73,30 @@ export default function RegisterNewCategory() {
 
         <FormField
           label="Cor"
-          FieldType="input"
           type="color"
           name="color"
           value={values.color}
           onChange={handleValues}
         />
 
-        <button type="button">
+        <Button>
           Cadastrar
-        </button>
-
-        <ul>
-          {categories.map((category) => (
-            <li key={`${category}`}>
-              {category.name}
-            </li>
-          ))}
-        </ul>
+        </Button>
       </form>
+
+      {categories.length === 0 && (
+        <div>
+          Carregando...
+        </div>
+      )}
+
+      <ul>
+        {categories.map((category) => (
+          <li key={`${category}`}>
+            {category.name}
+          </li>
+        ))}
+      </ul>
       <Link to="/">
         Ir para home
       </Link>

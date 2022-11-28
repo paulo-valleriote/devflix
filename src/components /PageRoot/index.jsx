@@ -13,6 +13,8 @@ const Main = styled.main`
     padding-top: 50px;
     padding-left: 5%;
     padding-right: 5%;
+
+    Button {background-color: transparent}
 `;
 
 export default function PageDefault({ children }) {
