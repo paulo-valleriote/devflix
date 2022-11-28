@@ -1,0 +1,10 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Front End",
+      "description": "Uma categoria bacanudassa",
+      "color": "#cbd1ff"
+    }
+  ]
+}
