@@ -1,12 +1,17 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../../components /Button';
 import FormField from '../../../components /FormField';
 import PageDefault from '../../../components /PageRoot';
+import API from '../../../baseurl';
+import Loading from '../../../components /Loading';
+import Table from '../../../components /Table';
 
 export default function RegisterNewCategory() {
   const initialValues = {
-    name: '',
+    title: '',
     description: '',
     color: '#000000',
   };
@@ -27,39 +32,65 @@ export default function RegisterNewCategory() {
     setValue(e.target.getAttribute('name'), e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     e.stopPropagation();
 
+    try {
+      API.post('/categories', {
+        title: values.title,
+        description: values.description,
+        color: values.color,
+      });
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.log(err.message);
+    }
     setCategories([...categories, values]);
 
     setValues(initialValues);
   };
 
+  const fetchCategories = async () => {
+    try {
+      const res = await API.get('categories');
+
+      setCategories([
+        ...res.data,
+      ]);
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+
+  const removeCategory = async (id) => {
+    try {
+      await API.delete(`/categories/${id}`);
+
+      fetchCategories();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   useEffect(() => {
-    const URL = 'http://localhost:8080/categories';
-    fetch(URL)
-      .then(async (serverRes) => {
-        const res = await serverRes.json();
-        setCategories([
-          ...res,
-        ]);
-      });
+    fetchCategories();
   }, []);
 
   return (
     <PageDefault>
       <h1>
         Cadastro de Categoria:
-        {values.name}
+        {' '}
+        {values.title}
       </h1>
 
       <form onSubmit={(e) => handleSubmit(e)}>
         <FormField
-          label="Nome da Categoria"
+          label="Título da Categoria"
           type="text"
-          name="name"
-          value={values.name}
+          name="title"
+          value={values.title}
           onChange={handleValues}
         />
 
@@ -79,24 +110,63 @@ export default function RegisterNewCategory() {
           onChange={handleValues}
         />
 
-        <Button>
-          Cadastrar
+        <FormField
+          label="Autenticação"
+          type="text"
+          name="auth"
+          value={values.auth}
+          onChange={handleValues}
+        />
+
+        <Button
+          style={{
+            backgroundColor: 'var(--primary)',
+            border: 'none',
+            marginRight: '30px',
+            marginBottom: '30px',
+          }}
+        >
+          Salvar
+        </Button>
+
+        <Button
+          onClick={(e) => {
+            e.preventDefault();
+            setValues(initialValues);
+          }}
+          style={{
+            color: 'var(--black)',
+            backgroundColor: 'var(--grayDarker)',
+            border: 'none',
+          }}
+        >
+          Limpar
         </Button>
       </form>
 
-      {categories.length === 0 && (
-        <div>
-          Carregando...
-        </div>
-      )}
+      {
+        categories.length === 0 && (
+          <Loading>
+            Carregando categorias...
+          </Loading>
+        )
+      }
 
-      <ul>
-        {categories.map((category) => (
-          <li key={`${category}`}>
-            {category.name}
-          </li>
-        ))}
-      </ul>
+      {
+        categories.length !== 0 && (
+          <Table>
+            {categories.map((category) => (
+              <tr key={category.id}>
+                <td>{category.title}</td>
+                <td>{category.description}</td>
+                <td>Editar</td>
+                <td onClick={() => removeCategory(category.id)}>Remover</td>
+              </tr>
+            ))}
+          </Table>
+        )
+      }
+
       <Link to="/">
         Ir para home
       </Link>

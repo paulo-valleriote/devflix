@@ -9,7 +9,7 @@ import Footer from '../../components /Footer';
 import initialData from '../../data/initial_data.json';
 
 const AppWrapper = styled.div`
-  background-color: var(--grayDark);
+  background-color: var(--black);
 `;
 
 export default function Home() {
