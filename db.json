@@ -1,10 +1,150 @@
 {
   "categories": [
     {
-      "id": 1,
-      "name": "Front End",
-      "description": "Uma categoria bacanudassa",
-      "color": "#cbd1ff"
+      "title": "Músicas",
+      "description": "Músicas que eu curto",
+      "color": "#6B5BE2",
+      "id": 1
+    },
+    {
+      "title": "RPG's de Mesa",
+      "description": "Rpgs que valem a pena ver!",
+      "color": "#9cd33b",
+      "id": 2
+    },
+    {
+      "title": "Front End",
+      "description": "Vídeos sobre Front End",
+      "color": "#6BD1FF",
+      "id": 3
+    },
+    {
+      "title": "Back End",
+      "description": "Vídeos sobre Back End",
+      "color": "#00C86F",
+      "id": 4
+    },
+    {
+      "title": "Filmes",
+      "description": "Você precisa assistir",
+      "color": "orange",
+      "id": 5
+    },
+    {
+      "title": "Séries",
+      "description": "Você precisa assistir",
+      "color": "purple",
+      "id": 6
+    },
+    {
+      "title": "Games",
+      "description": "Dignos de GOTY",
+      "color": "red",
+      "id": 7
+    }
+  ],
+  "videos": [
+    {
+      "categoryId": 7,
+      "title": "Assassins Creed Valhalla",
+      "url": "https://www.youtube.com/watch?v=KDfdjB9uL0U",
+      "id": 1
+    },
+    {
+      "categoryId": 7,
+      "title": "God of War 4",
+      "url": "https://www.youtube.com/watch?v=FyIwEFXOcaE",
+      "id": 2
+    },
+    {
+      "categoryId": 6,
+      "titulo": "Senhor dos Anéis: Os Anéis de Poder",
+      "url": "https://www.youtube.com/watch?v=m-CvfthZ4zg",
+      "id": 3
+    },
+    {
+      "categoryId": 6,
+      "titulo": "Dark",
+      "url": "https://www.youtube.com/watch?v=JCCssUOtn2E",
+      "id": 4
+    },
+    {
+      "categoryId": 5,
+      "title": "Interestellar",
+      "url": "https://www.youtube.com/watch?v=mbbPSq63yuM",
+      "id": 5
+    },
+    {
+      "categoryId": 5,
+      "title": "O Senhor dos Anéis: O Retorno do Rei",
+      "url": "https://www.youtube.com/watch?v=LiKeQrChkTY",
+      "id": 6
+    },
+    {
+      "categoryId": 5,
+      "title": "Homem-Aranha: Através do Aranhaverso",
+      "url": "https://www.youtube.com/watch?v=RKb1jSW56UQ",
+      "id": 7
+    },
+    {
+      "categoryId": 4,
+      "title": "API: Dicionário do Programador",
+      "url": "https://www.youtube.com/watch?v=vGuqKIRWosk",
+      "id": 8
+    },
+    {
+      "categoryId": 4,
+      "title": "Usando Git Direito",
+      "url": "https://www.youtube.com/watch?v=6OokP-NE49k",
+      "id": 9
+    },
+    {
+      "categoryId": 3,
+      "title": "SEO com React",
+      "url": "https://www.youtube.com/watch?v=c8mVlakBESE",
+      "id": 10
+    },
+    {
+      "categoryId": 3,
+      "title": "Qual é a melhor linguagem de programação? #HipstersPontoTube",
+      "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w",
+      "id": 11
+    },
+    {
+      "categoryId": 1,
+      "title": "Heilung - Krigsgaldr",
+      "url": "https://www.youtube.com/watch?v=QRg_8NNPTD8",
+      "id": 12
+    },
+    {
+      "categoryId": 1,
+      "title": "Nirvana - In Bloom",
+      "url": "https://www.youtube.com/watch?v=PbgKEjNBHqM",
+      "id": 13
+    },
+    {
+      "categoryId": 1,
+      "title": "IC3PEAK - Смерти Больше Нет",
+      "url": "https://www.youtube.com/watch?v=MBG3Gdt5OGs",
+      "id": 14
+    },
+    {
+      "categoryId": 2,
+      "title": "'Tipora'- Episódio 1 - O Segredo Na Ilha",
+      "url": "https://youtu.be/Pf4HzTdA2WE",
+      "id": 15
+    },
+    {
+      "categoryId": 2,
+      "title": "'Ordo Realitas'- Episódio 1 - Ordem Paranormal: Desconjuração",
+      "url": "https://www.youtube.com/watch?v=b7PvLWZR6pg",
+      "id": 16
+    },
+    {
+      "categoryId": 2,
+      "title": "Curious Beginnings | Critical Role: The Mighty Nein | Episode 1",
+      "url": "https://www.youtube.com/watch?v=byva0hOj8CU",
+      "id": 17
     }
   ]
 }
