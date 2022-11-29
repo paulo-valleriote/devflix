@@ -24,7 +24,12 @@ Projeto feito com base na `Imersão React 1` da Alura. Um agregador de vídeos c
 
 - [x] Agregar vídeos
 - [x] Tonar a aplicação uma SPA (Single Page Application)
-- [ ] Criação de novos vídeos e categorias
+- [X] Criação de novos vídeos e categorias
+- [X] Editar e Remover Categorias
+- [ ] Validações dos Forms
+- [ ] Mostrar o título do Vídeo com Hover
+- [ ] Autoplay no vídeo quando ficar com mouse em cima
+- [ ] Editar e Remover Vídeos
 - [ ] Separar por usuários (cadastro e login)
 
 ---

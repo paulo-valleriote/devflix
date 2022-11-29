@@ -1,64 +1,49 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-import styled from 'styled-components';
-import Menu from '../../components / Menu';
-import BannerMain from '../../components /BannerMain';
 import Carousel from '../../components /Carousel';
-import Footer from '../../components /Footer';
-
-import initialData from '../../data/initial_data.json';
-
-const AppWrapper = styled.div`
-  background-color: var(--black);
-`;
+import BannerMain from '../../components /BannerMain';
+import Loading from '../../components /Loading';
+import PageDefault from '../../components /PageRoot';
+import API from '../../config';
 
 export default function Home() {
+  const [initialData, setInitialData] = useState([]);
+  const [bannerData, setBannerData] = useState([]);
+
+  useEffect(() => {
+    API.get('/categories?_embed=videos')
+      .then(async (res) => res.data)
+      .then(async (res) => setInitialData(res))
+      .catch((err) => console.log(err.message));
+
+    API.get('/categories/1?_embed=videos')
+      .then(async (res) => res.data)
+      .then(async (res) => res.videos[0])
+      .then(async (res) => setBannerData([res]))
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
-    <AppWrapper>
-      <Menu />
+    <PageDefault paddingAll={0}>
+      {initialData.length === 0 && (<Loading>Loading...</Loading>)}
 
-      <BannerMain
-        videoTitle={initialData.categorias[2].videos[1].titulo}
-        url={initialData.categorias[2].videos[1].url}
-        videoDescription="O que é Front-end? Trabalhando na área."
-      />
+      {bannerData.map((data) => (
+        <BannerMain
+          key={data.id}
+          videoTitle={data.title}
+          videoDescription=""
+          url={data.url}
+        />
+      ))}
 
-      <Carousel
-        ignoreFirstVideo
-        category={initialData.categorias[0]}
-      />
+      {initialData.map((data) => (
+        <Carousel
+          key={data.id}
+          ignoreFirstVideo
+          category={data}
+        />
+      ))}
 
-      <Carousel
-        ignoreFirstVideo
-        category={initialData.categorias[1]}
-      />
-
-      <Carousel
-        ignoreFirstVideo
-        category={initialData.categorias[2]}
-      />
-
-      <Carousel
-        ignoreFirstVideo
-        category={initialData.categorias[3]}
-      />
-
-      <Carousel
-        ignoreFirstVideo
-        category={initialData.categorias[4]}
-      />
-
-      <Carousel
-        ignoreFirstVideo
-        category={initialData.categorias[5]}
-      />
-
-      <Carousel
-        ignoreFirstVideo
-        category={initialData.categorias[6]}
-      />
-
-      <Footer />
-    </AppWrapper>
+    </PageDefault>
   );
 }

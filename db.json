@@ -145,6 +145,144 @@
       "title": "Curious Beginnings | Critical Role: The Mighty Nein | Episode 1",
       "url": "https://www.youtube.com/watch?v=byva0hOj8CU",
       "id": 17
+    },
+    {
+      "title": "Componentização com VanillaJS",
+      "url": "https://www.youtube.com/watch?v=LatCKpcOMak",
+      "categoryId": 3,
+      "id": 18
+    },
+    {
+      "title": "Base para aprender os frameworks",
+      "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI",
+      "categoryId": 3,
+      "id": 19
+    },
+    {
+      "title": "O que faz um desenvolvedor front-end?",
+      "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw",
+      "categoryId": 3,
+      "id": 20
+    },
+    {
+      "title": "Ghost - Cirice",
+      "url": "https://www.youtube.com/watch?v=-0Ao4t_fe0I",
+      "categoryId": 1,
+      "id": 21
+    },
+    {
+      "title": "Wardruna - Grá",
+      "url": "https://www.youtube.com/watch?v=kFU7nRe7C0A",
+      "categoryId": 1,
+      "id": 22
+    },
+    {
+      "title": "Heilung - Anoana",
+      "url": "https://www.youtube.com/watch?v=SVbc_Fwbt50",
+      "categoryId": 1,
+      "id": 23
+    },
+    {
+      "title": "Wardruna - Lyfjaberg",
+      "url": "https://www.youtube.com/watch?v=VEizKmZlUAw",
+      "categoryId": 1,
+      "id": 24
+    },
+    {
+      "title": "Tipora - Episódio 1 - O Segredo Na Ilha",
+      "url": "https://youtu.be/Pf4HzTdA2WE",
+      "categoryId": 2,
+      "id": 25
+    },
+    {
+      "title": "\"Alheios\" - Episódio 1 - Sinais do Outro Lado",
+      "url": "https://www.youtube.com/watch?v=k5y48mQTdpE",
+      "categoryId": 2,
+      "id": 26
+    },
+    {
+      "title": "Skyfall - Episódio 1: O Mercado Repentino",
+      "url": "https://www.youtube.com/watch?v=N6b4da5LWjE",
+      "categoryId": 2,
+      "id": 27
+    },
+    {
+      "title": "Percurso em NÍVEL em ÁRVORE BINÁRIA ",
+      "url": "https://www.youtube.com/watch?v=UOK7nS2E9xM",
+      "categoryId": 4,
+      "id": 28
+    },
+    {
+      "title": "Coders4Tips - S01E04: GitHub CLI - Uma nova Experiência n...",
+      "url": "https://www.youtube.com/watch?v=6o6-bKOZOEY",
+      "categoryId": 4,
+      "id": 29
+    },
+    {
+      "title": "API: Dicionário do Programador",
+      "url": "https://www.youtube.com/watch?v=vGuqKIRWosk",
+      "categoryId": 4,
+      "id": 30
+    },
+    {
+      "title": "Interestellar",
+      "url": "https://www.youtube.com/watch?v=mbbPSq63yuM",
+      "categoryId": 5,
+      "id": 31
+    },
+    {
+      "title": "Warcraft ",
+      "url": "https://www.youtube.com/watch?v=Dqvz8w-latE",
+      "categoryId": 5,
+      "id": 32
+    },
+    {
+      "title": "Better Call Saul",
+      "url": "https://www.youtube.com/watch?v=zzy6wWjFONY",
+      "categoryId": 6,
+      "id": 33
+    },
+    {
+      "title": "La Casa de Papel",
+      "url": "https://www.youtube.com/watch?v=iS5xXr-GOnM",
+      "categoryId": 6,
+      "id": 34
+    },
+    {
+      "title": "Ragnarok",
+      "url": "https://www.youtube.com/watch?v=i2qDt5D8RSs",
+      "categoryId": 6,
+      "id": 35
+    },
+    {
+      "title": "Resident Evil 8",
+      "url": "https://www.youtube.com/watch?v=JSapXD9vxYA",
+      "categoryId": 7,
+      "id": 36
+    },
+    {
+      "title": "The Last Of Us Part II",
+      "url": "https://www.youtube.com/watch?v=W2Wnvvj33Wo&t=2s",
+      "categoryId": 7,
+      "id": 38
+    },
+    {
+      "title": "Marvel's Spider-Man: Miles Morales",
+      "url": "https://www.youtube.com/watch?v=GqPLeQJ6lJk",
+      "categoryId": 7,
+      "id": 39
+    },
+    {
+      "title": "Red Dead Redemption 2",
+      "url": "https://www.youtube.com/watch?v=WDvFz2LL1WI",
+      "categoryId": 7,
+      "id": 40
+    },
+    {
+      "title": "Spider-Man: No Way Home",
+      "url": "https://www.youtube.com/watch?v=JfVOs4VSpmA",
+      "categoryId": 5,
+      "id": 41
     }
   ]
 }

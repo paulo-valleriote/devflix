@@ -2,12 +2,13 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../../../components /Button';
+import { ConfirmButton, ResetButton } from '../../../components /Button';
 import FormField from '../../../components /FormField';
 import PageDefault from '../../../components /PageRoot';
-import API from '../../../baseurl';
+import API from '../../../config';
 import Loading from '../../../components /Loading';
 import Table from '../../../components /Table';
+import useForm from '../../../hooks/useForm';
 
 export default function RegisterNewCategory() {
   const initialValues = {
@@ -16,21 +17,9 @@ export default function RegisterNewCategory() {
     color: '#000000',
   };
 
+  const { values, handleValues, clearForm } = useForm(initialValues);
+
   const [categories, setCategories] = useState([]);
-  const [values, setValues] = useState(initialValues);
-
-  const setValue = (fieldKey, fieldValue) => {
-    setValues({
-      ...values,
-      [fieldKey]: fieldValue,
-    });
-  };
-
-  const handleValues = (e) => {
-    e.stopPropagation();
-
-    setValue(e.target.getAttribute('name'), e.target.value);
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -48,7 +37,7 @@ export default function RegisterNewCategory() {
     }
     setCategories([...categories, values]);
 
-    setValues(initialValues);
+    clearForm();
   };
 
   const fetchCategories = async () => {
@@ -67,7 +56,7 @@ export default function RegisterNewCategory() {
     try {
       await API.delete(`/categories/${id}`);
 
-      fetchCategories();
+      await fetchCategories();
     } catch (err) {
       console.error(err);
     }
@@ -118,30 +107,18 @@ export default function RegisterNewCategory() {
           onChange={handleValues}
         />
 
-        <Button
-          style={{
-            backgroundColor: 'var(--primary)',
-            border: 'none',
-            marginRight: '30px',
-            marginBottom: '30px',
-          }}
-        >
+        <ConfirmButton>
           Salvar
-        </Button>
+        </ConfirmButton>
 
-        <Button
+        <ResetButton
           onClick={(e) => {
             e.preventDefault();
-            setValues(initialValues);
-          }}
-          style={{
-            color: 'var(--black)',
-            backgroundColor: 'var(--grayDarker)',
-            border: 'none',
+            clearForm(initialValues);
           }}
         >
           Limpar
-        </Button>
+        </ResetButton>
       </form>
 
       {

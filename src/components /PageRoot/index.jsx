@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Menu from '../ Menu';
 import Footer from '../Footer';
@@ -14,14 +14,16 @@ const Main = styled.main`
     padding-left: 5%;
     padding-right: 5%;
 
-    Button {background-color: transparent}
+    ${({ paddingAll }) => css`
+      padding: ${paddingAll};
+    `}
 `;
 
-export default function PageDefault({ children }) {
+export default function PageDefault({ children, paddingAll }) {
   return (
     <>
       <Menu />
-      <Main>
+      <Main paddingAll={paddingAll}>
         {children}
       </Main>
       <Footer />
@@ -29,6 +31,11 @@ export default function PageDefault({ children }) {
   );
 }
 
+PageDefault.defaultProps = {
+  paddingAll: null,
+};
+
 PageDefault.propTypes = {
   children: PropTypes.array.isRequired,
+  paddingAll: PropTypes.number,
 };

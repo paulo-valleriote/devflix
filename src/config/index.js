@@ -10,8 +10,8 @@ const verifyENV = () => {
 
 const API = axios.create({
   baseURL: verifyENV(),
-  timeout: 1000,
-  headers: { 'X-Custom-Header': 'foobar' },
+  timeout: 10000,
+  headers: { 'Content-Type': 'Application/json' },
 });
 
 export default API;
