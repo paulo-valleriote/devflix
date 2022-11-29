@@ -26,7 +26,7 @@ Label.Text = styled.span`
   top: 0;
   left: 16px;
 
-  color: #E5E5E5;
+  color: var(--grayMedium);
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
@@ -44,16 +44,16 @@ const Input = styled.input`
   padding: 16px 16px;
   margin-bottom: 45px;
 
-  color: #F5F5F5;
+  color: var(--grayLight);
   font-size: 18px;
 
   outline: 0;
   border: 0;
   border-radius: 4px;
   border-top: 4px solid transparent;
-  border-bottom: 4px solid #53585D;
+  border-bottom: 4px solid var(--blackLighter);
 
-  background: #53585D;
+  background: var(--blackLighter);
 
   resize: none;
 
@@ -76,6 +76,7 @@ function FormField({
   const fieldId = `id_${name}`;
   const isTextArea = type === 'textarea';
   const tag = isTextArea ? 'textarea' : 'input';
+  const maxLength = isTextArea ? 36 : 16;
 
   const hasValue = Boolean(value.length);
 
@@ -88,6 +89,8 @@ function FormField({
           type={type}
           value={value}
           name={name}
+          maxLength={maxLength}
+          minLength={3}
           hasValue={hasValue}
           onChange={onChange}
         />
